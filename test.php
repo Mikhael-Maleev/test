@@ -62,12 +62,12 @@ if (empty($file_list) && !$full_check) {
 // Get the path to the PHP CodeSniffer binary from composer.json.
 //$command = getcwd() . '/vendor/bin/phpcs';
 $command = '/Users/mmaleev/.composer/vendor/bin/phpcs';
-if ($composer_json = json_decode(file_get_contents(getcwd() . '/composer.json'))) {
-  if (!empty($composer_json->config->{'bin-dir'})) {
-    $bin_dir = escapeshellcmd(trim($composer_json->config->{'bin-dir'}, '/'));
-    $command = getcwd() . '/' . $bin_dir . '/phpcs';
-  }
-}
+//if ($composer_json = json_decode(file_get_contents(getcwd() . '/composer.json'))) {
+//  if (!empty($composer_json->config->{'bin-dir'})) {
+//    $bin_dir = escapeshellcmd(trim($composer_json->config->{'bin-dir'}, '/'));
+//    $command = getcwd() . '/' . $bin_dir . '/phpcs';
+//  }
+//}
 // Check if the PHP CodeSniffer binary is present.
 if (!is_executable($command)) {
   echo "error: PHP CodeSniffer binary not found at $command\n";
