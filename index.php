@@ -12,4 +12,6 @@
  */
 
 print 'Helloy world';
-asdf
+function test() {
+  echo 'Yo!';
+}
