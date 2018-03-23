@@ -60,7 +60,8 @@ if (empty($file_list) && !$full_check) {
   exit(0);
 }
 // Get the path to the PHP CodeSniffer binary from composer.json.
-$command = getcwd() . '/vendor/bin/phpcs';
+//$command = getcwd() . '/vendor/bin/phpcs';
+$command = '/Users/mmaleev/.composer/vendor/bin/phpcs';
 if ($composer_json = json_decode(file_get_contents(getcwd() . '/composer.json'))) {
   if (!empty($composer_json->config->{'bin-dir'})) {
     $bin_dir = escapeshellcmd(trim($composer_json->config->{'bin-dir'}, '/'));
