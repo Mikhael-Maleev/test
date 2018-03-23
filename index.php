@@ -15,3 +15,4 @@ print 'Helloy world';
 function test() {
   echo 'Yo!';
 }
+
