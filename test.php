@@ -75,5 +75,5 @@ if (!is_executable($command)) {
 }
 // Run PHP CodeSniffer and exit.
 $file_filter = $full_check ? '' : " '" . implode("' '", $file_list) . "'";
-passthru($command . $file_filter, $return_value);
+passthru($command . ' --standard=Drupal ' . $file_filter, $return_value);
 exit($return_value);
